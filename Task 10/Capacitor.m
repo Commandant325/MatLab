@@ -1,0 +1,19 @@
+function Capacitor(t, Q)
+
+	plot(t, Q)
+	title("Capacitor Electrostatic Charge", FontSize = 14)
+	xlabel("time (ms)", FontSize = 12)
+	ylabel("electrostatic charge (C)", FontSize = 12)
+	axis([min(t), max(t), - 1, 6])
+	% limits of the figure : 0 < x < 11 and - 1 < y < 6
+	legend("Exponential function with negative power")
+	annotation( ...
+		"textbox", ... % I use "..." to split the line
+		String = "The mainstream graph is an exp function", ...
+		FontSize = 12, ...
+		VerticalAlignment = "middle", ...
+		HorizontalAlignment = "center", ...
+		BackgroundColor = [0.8, 0.8, 0.8] ...
+	)
+
+end
